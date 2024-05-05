@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buchungssystem</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Buchung erfassen</h2>
+    <form id="bookingForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="date">Datum:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="quantity">Anzahl:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+        <input type="submit" value="Buchung hinzufügen">
+        <button type="button" id="cancelEdit" style="display: none;">Abbrechen</button>
+    </form>
+
+    <h2>Buchungen</h2>
+    <table id="bookingTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Datum</th>
+                <th>Anzahl</th>
+            </tr>
+        </thead>
+        <tbody id="bookingTableBody"></tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
